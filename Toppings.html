@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cooka da pizza</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+    .logo {
+      width: 150px;
+      height: 50px;
+    }
+
+    #Pep {
+      opacity: 0%;
+      position: absolute;
+      left: 400px;
+      top: 200px;
+      width: 75px;
+      height: 50px;
+    }
+
+    #meat {
+      opacity: 0%;
+      position: absolute;
+      left: 300px;
+      top: 250px;
+      width: 100px;
+      height: 75px;
+    }
+
+    #Basil {
+      opacity: 0%;
+      position: absolute;
+      left: 400px;
+      top: 300px;
+      width: 90px;
+      height: 75px;
+    }
+    #costs{
+      position: absolute;
+      top: 550px;
+      right: 200px;
+      height: 100px;
+      width: 185px;
+    }
+    .pep {
+      position: absolute;
+      top: 100px;
+      right: 200px;
+      height: 50px;
+      width: 200px;
+    }
+
+    .meat {
+      position: absolute;
+      top: 250px;
+      right: 200px;
+      height: 50px;
+      width: 200px;
+    }
+
+    .basil {
+      position: absolute;
+      top: 400px;
+      right: 200px;
+      height: 50px;
+      width: 200px;
+    }
+
+    .cheza {
+      position: absolute;
+      left: 200px;
+      height: 500px;
+      width: 500px;
+      z-index: -1;
+    }
+
+    #button {
+      background-color: #f42c1e;
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      text-align: center;
+      font-size: 16px;
+      margin: 4px 2px;
+      opacity: 0.5;
+      transition: 0.4s;
+      border-radius: 5px;
+    }
+
+    #button:hover {
+      opacity: 1
+    }
+
+    .foot {
+      position: absolute;
+      bottom: 0px;
+    }
+    .orange{
+      height: 50px;
+      width: 75px;
+    }
+    .orang{
+      height: 50px;
+      width: 75px;
+    }
+    .orag{
+      height: 50px;
+      width: 75px;
+    }
+    #Cost{
+      position: absolute;
+      left: 200px;
+      height: 500px;
+      width: 500px;
+    }
+
+    #pizzadiv {
+      width: 400px;
+      height: 400px;
+      position: absolute;
+      top: 125px;
+      left: 250px;
+    }
+
+    #mario {
+      position: absolute;
+      top: 10px;
+      opacity: 0%;
+    }
+
+    #mario:hover {
+      opacity: 100%;
+    }
+    body{
+      background-color: #d8cebd;
+    }
+    nav{
+      background-color: #a39fa1;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-body-">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="Media/Pizza_Hut_Logo(1).png" class="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Home.html">Our Mission</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Toppings.html">Cooka da pizza</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="checkout.html">Checkout</a>
+            </li>
+            <li class="nav-item">
+              <img id="mario" src="https://media.tenor.com/k8dq8z1TZ3AAAAAe/angry-mario.png" width="130" height="60">
+              <a class="nav-link disabled" aria-disabled="true">Complaint Page</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div id="pizzadiv"></div>
+  <img src="Media/download-removebg-preview(12).png" alt="za" class="cheza">
+  <div id="pizzadisplay">
+    <img src="Media/images-removebg-preview(4).png" alt="orange" class="orange" id="meat">
+    <img src="Media/download-removebg-preview(13).png" alt="orange" class="orange" id="Basil">
+  </div>
+  <div class="row">
+    <div class="container-fluid pep">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Pepperoni <p id="balls">0</p> </h5>
+          <button onclick="doPep()" id="button" onmouseenter="">+</button><button onclick="doUnPep()" id="button">-</button>
+        </div>
+      </div>
+    </div>
+    <div id=costs>
+      <h3 id="cost">Cost</h3>
+    </div>
+    <div class="container-fluid meat">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Sausage <p id="saus">0</p></h5>
+          <button onclick="doSaus()" id="button">+</button><button onclick="doUnSaus()" id="button">-</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid basil">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Basil <p id="bals">0</p></h5>
+        <button onclick="doBals()" id="button">+</button><button onclick="doUnBals()" id="button">-</button>
+      </div>
+    </div>
+  </div>
+  <script>
+
+let pepindex = 0;
+let num = 0;
+let n = 0;   
+let z = 0;
+function doPep() {
+  num++;
+  document.getElementById("pizzadiv").innerHTML +=
+    '<img id="pep' + num + '" src="Media/download-removebg-preview(11).png" alt="orang" style="position: absolute; left:' + (Math.random() * 325) +'px; top:' + (Math.random() * 325) +'px;" class="orange">';
+    document.getElementById("balls").innerHTML = "" + num;
+  updateCost();
+}
+
+function doUnPep() {
+  if (num > 0) {
+    document.getElementById("pep" + num).remove();
+    num--;
+    document.getElementById("balls").innerHTML = "" + num;
+  }
+  updateCost();
+}
+
+function doSaus() {
+  n++;
+  document.getElementById("pizzadiv").innerHTML +=
+    '<img id="sus' + n + '" src="Media/images-removebg-preview(4).png" alt="orang" style="position: absolute; left:' + (Math.random() * 325) +'px; top:' + (Math.random() * 325) +'px;" class="orang">';
+  document.getElementById("saus").innerHTML = "" + n;
+  updateCost();
+}
+
+function doUnSaus() {
+  if (n > 0) {
+    document.getElementById("sus" + n).remove();
+    n--;
+    document.getElementById("saus").innerHTML = "" + n;
+    updateCost();
+  }
+}
+
+function doBals() {
+  z++;
+  document.getElementById("pizzadiv").innerHTML +=
+    '<img id="bas' + z + '" src="Media/download-removebg-preview(13).png" alt="orang" style="position: absolute; left:' + (Math.random() * 325) +'px; top:' + (Math.random() * 325) +'px;" class="orag">';
+  document.getElementById("bals").innerHTML = "" + z;
+  updateCost();
+}
+function doUnBals(){
+  if (z > 0) {
+    document.getElementById("bas" + z).remove();
+    z--;
+    document.getElementById("bals").innerHTML = "" + z;
+  }
+  updateCost();
+}
+  function updateCost() {
+    var total=((z + n + num) * 0.2).toFixed(2);
+    document.getElementById("cost").innerHTML = total
+    localStorage.setItem("nom",document.getElementById("cost").innerHTML);
+  }
+
+  </script>
+  <footer class="foot">All content in this is made by Ryan Evans Incorperated</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous">bals</script>
+</body>
+</html>
